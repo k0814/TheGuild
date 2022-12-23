@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-homepage.component.css']
 })
 export class AdminHomepageComponent {
+  //sources for images used on admin homepage and their associated pages
+  
   membersImage='../../assets/group.png'
   membersPage='#'
   eventsImage='../../assets/calendar.png'

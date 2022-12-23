@@ -7,11 +7,14 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   styleUrls: ['./admin-sidebar-mobile.component.css']
 })
 export class AdminSidebarMobileComponent implements OnInit{
+  //initially presume desktop display, don't show hamburger menu
+  //will be altered once the screen size is determined
   hideSidebarMobile=true;
   hamburgerImage='../../assets/Hamburger_icon.svg'
   hideHamburger=true;
 
   constructor(
+    //observer will report changes to the display size
     private breakpointObserver: BreakpointObserver
   ){
 
