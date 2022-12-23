@@ -1,0 +1,40 @@
+<div class="grid-container">
+    <div id="header" class="grid-item-header">Header</div>
+    
+    <div id="members" class="grid-item">
+        <a [href]="membersImage">
+            <img src={{membersImage}}>
+        </a>
+        <div>Members</div>
+    </div>
+    <div id="events" class="grid-item">
+        <a [href]="eventsImage">
+            <img src={{eventsImage}}>
+        </a>
+        <div>Events</div>
+    </div>
+
+    <div id="sidebar" class="grid-item-sidebar">
+        <ul>
+            <li><a href="#">Manage account</a></li>
+            <li><a href="#">Change website display</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+    
+    <div id="announce" class="grid-item">
+        <a [href]="announcePage">
+            <img src={{announceImage}} >
+        </a>
+        <div>Announce</div>
+    </div>
+    <div id="reports" class="grid-item">
+        <a href="#">
+            <img src={{reportsImage}} >
+        </a>
+        <div>Reports</div>
+    </div>
+    <div id="footer" class="grid-item-footer" [innerHTML]="footerText">
+
+    </div>
+</div>

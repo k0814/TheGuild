@@ -1,0 +1,10 @@
+<div class="hamburger" (click)="showSidebar()" [class.hiddenElement]="hideHamburger">
+    <img  src={{hamburgerImage}}>
+</div>
+<div class="sidebar" [class.hiddenElement]="hideSidebarMobile">
+    <ul>
+        <li>Manage account</li>
+        <li>change website display</li>
+        <li>Logout</li>
+    </ul>
+</div>
