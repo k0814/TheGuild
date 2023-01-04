@@ -1,40 +1,44 @@
-<div class="grid-container">
-    <div id="header" class="grid-item-header">Header</div>
-    
-    <div id="members" class="grid-item">
-        <a [href]="membersImage">
-            <img src={{membersImage}}>
-        </a>
-        <div>Members</div>
+<app-header></app-header>
+<div class="container">
+     
+    <div class="content"> 
+        <div class="newLine">
+            <div id="members" class="card">
+                <a [href]="membersPage">
+                    <img src={{membersImage}} >
+                </a>
+                <div>Members</div>
+            </div>
+            <div id="events" class="card">
+                <a [href]="eventsPage">
+                    <img src={{eventsImage}} >
+                </a>
+                <div>Events</div>
+            </div>
+        </div>
     </div>
-    <div id="events" class="grid-item">
-        <a [href]="eventsImage">
-            <img src={{eventsImage}}>
-        </a>
-        <div>Events</div>
-    </div>
+    <app-admin-sidebar-desktop></app-admin-sidebar-desktop>
 
-    <div id="sidebar" class="grid-item-sidebar">
-        <ul>
-            <li><a href="#">Manage account</a></li>
-            <li><a href="#">Change website display</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </div>
-    
-    <div id="announce" class="grid-item">
-        <a [href]="announcePage">
-            <img src={{announceImage}} >
-        </a>
-        <div>Announce</div>
-    </div>
-    <div id="reports" class="grid-item">
-        <a href="#">
-            <img src={{reportsImage}} >
-        </a>
-        <div>Reports</div>
-    </div>
-    <div id="footer" class="grid-item-footer" [innerHTML]="footerText">
+    <div class="content">
+        <div class="newLine">
+            <div id="announce" class="card">
+                <a [href]="announcePage">
+                    <img src={{announceImage}}  >
+                </a>
+                <div>Announce</div>
+            </div>
+            <div id="reports" class="card">
+                <a [href]="reportsPage">
+                    <img src={{reportsImage}} >
+                </a>
+                <div>Reports</div>
+            </div>
+        </div>
+
+        
 
     </div>
+   
 </div>
+    
+<app-footer></app-footer>

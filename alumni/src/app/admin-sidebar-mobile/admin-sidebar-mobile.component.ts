@@ -21,6 +21,7 @@ export class AdminSidebarMobileComponent implements OnInit{
   }
 
   ngOnInit(){
+    console.log(Breakpoints)
     //get notified in case of change of display size
     this.breakpointObserver.observe([Breakpoints.Handset,Breakpoints.Tablet,Breakpoints.Web]).subscribe(result=>{
       const breakpoints=result.breakpoints;
