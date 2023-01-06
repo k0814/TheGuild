@@ -5,5 +5,6 @@
     width: 100vw;
     height: 10vh;
     clear: both;
+    margin-top: 1vh;
     background-color: blueviolet;
 }
