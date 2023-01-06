@@ -1,0 +1,77 @@
+
+<div class="container">
+
+<div class="the-logo"></div>
+
+
+<div class="signup-form">
+
+<form class="form" #userForm="ngForm">
+  <h3 id="form-title" st>Create a new account</h3>
+  <div>
+     <input class="input-box" type="text" #name="ngModel" placeholder="First Name" name="firstName"
+      [class.is-invalid]="name.invalid && name.touched" [(ngModel)]="memberModel.firstName" required>
+      
+     <!-- <small class="text-danger" [class.none]="name.valid && name.untouched">this field is rquired</small> -->
+   
+  </div>
+  <div>
+    <input class="input-box" type="text" #lname="ngModel" placeholder="Last Name" name="lastName"
+    [class.is-invalid]="lname.invalid && lname.touched"
+    [(ngModel)]="memberModel.lastName" required>
+  </div>
+  <div>
+    <input class="input-box" type="text" #email="ngModel" placeholder="Enter Email" name="email" 
+    [class.is-invalid]="email.invalid && email.touched"
+    [(ngModel)]="memberModel.email" required>
+  </div>
+    <select>
+      <option>Select institution</option>
+      <option *ngFor="let institution of listedInstitutions">{{institution}}</option>
+    </select>
+
+  <div>
+    <input class="input-box" type="password" pattern="^/d{10}$, {10} " #password="ngModel" 
+    [class.is-invalid]="password.touched && password.invalid" placeholder="Enter Password" name="password"
+    [(ngModel)]="memberModel.password" required>
+
+    <!--<small class="text-danger" [class.none]="password.valid && password.untouched">Password Must be 10 digits</small> -->
+    <div *ngIf="password.errors && (password.invalid || password.touched)">
+      <small class="text-danger" *ngIf="password.errors['required']"> Password is required</small>
+      <!--<small class="text-danger" *ngIf="password.errors['pattern']"> pattern should not be less than 10 digits</small> -->
+    </div>
+
+    </div>
+
+    <button>Register </button>
+
+    <a id="anchor" href="#">  Already have an account</a>
+
+    <p>By clicking Register, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive email notifications from us.</p>
+
+    
+    <hr>
+
+   
+    
+  
+</form>
+
+</div>
+
+
+<div >
+  <footer>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+  <hr>
+  </footer>
+</div>
+
+
+</div>
